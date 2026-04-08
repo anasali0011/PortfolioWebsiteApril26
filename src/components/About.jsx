@@ -131,17 +131,6 @@ const About = () => {
               <p className="text-4xl font-bold text-cyan-400">250+</p>
               <p className="text-sm text-slate-400 font-medium">DSA Problems Solved</p>
             </motion.div>
-
-            <motion.div 
-              animate={{ y: [0, 10, 0] }}
-              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-              className="absolute -top-6 -left-6 p-5 glass-card rounded-2xl border border-slate-700 shadow-2xl hidden md:block"
-            >
-              <div className="flex items-center gap-3">
-                <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse" />
-                <p className="text-sm font-bold text-slate-200">Open for Work</p>
-              </div>
-            </motion.div>
           </motion.div>
 
         </div>

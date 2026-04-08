@@ -9,7 +9,7 @@ const Projects = () => {
       category: 'Full-Stack Development',
       description: 'Implemented idempotent voting logic to eliminate duplicate submissions and ensure transactional integrity. Scaled the system to handle peak voting loads with zero data inconsistencies.',
       tech: ['Node.js', 'Express.js', 'MongoDB', 'JWT', 'Bcrypt'],
-      github: 'https://github.com/anasali0011',
+      github: 'https://github.com/anasali0011/Voting-Application',
       link: '#',
       image: 'https://images.unsplash.com/photo-1540910419892-4a36d2c3266c?q=80&w=2070&auto=format&fit=crop'
     },
@@ -18,7 +18,7 @@ const Projects = () => {
       category: 'AI/ML & Data Science',
       description: 'Designed a machine learning model to predict house prices using real-world datasets. Optimized model performance via GridSearchCV and cross-validation, evaluated with R² and RMSE metrics.',
       tech: ['Python', 'Scikit-learn', 'Pandas', 'Matplotlib', 'NumPy'],
-      github: 'https://github.com/anasali0011',
+      github: 'https://github.com/anasali0011/Real-Estate-House_Price_Prediction',
       link: '#',
       image: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=1973&auto=format&fit=crop'
     },
@@ -27,9 +27,18 @@ const Projects = () => {
       category: 'Web Development',
       description: 'Created a fully responsive online shopping site featuring mobile navigation, sliding menus, and smooth animations. Integrated dynamic product search and a real-time cart.',
       tech: ['React.js', 'JavaScript', 'HTML', 'CSS', 'Framer Motion'],
-      github: 'https://github.com/anasali0011',
+      github: 'https://github.com/anasali0011/ZippyCartUsingReact-Vite',
       link: 'https://zippycart01.netlify.app',
       image: 'https://images.unsplash.com/photo-1472851294608-062f824d29cc?q=80&w=2070&auto=format&fit=crop'
+    },
+    {
+      title: '🌤️ SkyCast Weather Dashboard',
+      category: 'React Application',
+      description: 'A high-performance, modern weather dashboard providing real-time forecasts, air quality data, and 2-year historical trends. Features auto-location detection and interactive Recharts visualizations.',
+      tech: ['React (Vite)', 'Tailwind CSS', 'Recharts', 'Open-Meteo API', 'Lucide React'],
+      github: 'https://github.com/anasali0011/SkyCast-Dashboard.git',
+      link: 'https://weatherdashboard011.netlify.app/',
+      image: 'https://images.unsplash.com/photo-1592210454359-9043f067919b?q=80&w=2070&auto=format&fit=crop'
     }
   ];
 

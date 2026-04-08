@@ -15,16 +15,29 @@ const Hero = () => {
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5 }}
-          className="mb-8 flex justify-center"
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="mb-12 flex justify-center relative"
         >
-          <div className="relative group">
-            <div className="absolute -inset-1 bg-gradient-to-r from-cyan-400 to-blue-600 rounded-full blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
-            <img 
-              src={heroImage} 
-              alt="Anas Ali" 
-              className="relative w-32 h-32 md:w-40 md:h-40 rounded-full border-4 border-slate-900 object-cover shadow-2xl"
-            />
+          <div className="relative group max-w-md w-full px-4">
+            {/* Background Abstract Shapes */}
+            <div className="absolute -inset-4 bg-gradient-to-r from-cyan-500/20 to-blue-600/20 rounded-[2rem] blur-2xl group-hover:opacity-75 transition duration-1000"></div>
+            
+            {/* Main Image Container */}
+            <div className="relative aspect-[4/3] rounded-[2rem] overflow-hidden border-2 border-slate-800 shadow-2xl group-hover:border-cyan-500/50 transition-all duration-500">
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent z-10" />
+              <img 
+                src={heroImage} 
+                onError={(e) => {
+                  e.target.src = "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1974&auto=format&fit=crop";
+                }}
+                alt="Anas Ali Profile" 
+                className="w-full h-full object-cover transition-all duration-700 group-hover:scale-105"
+              />
+            </div>
+
+            {/* Corner Decorative Elements */}
+            <div className="absolute -top-4 -right-4 w-24 h-24 bg-cyan-500/10 rounded-full blur-2xl -z-10" />
+            <div className="absolute -bottom-4 -left-4 w-24 h-24 bg-blue-600/10 rounded-full blur-2xl -z-10" />
           </div>
         </motion.div>
 
@@ -33,19 +46,18 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 tracking-tight flex flex-wrap justify-center gap-x-4">
-            <span>Hi, I'm</span>
-            <span className="text-gradient">
-              <Typewriter
-                options={{
-                  strings: ['Anas Ali'],
-                  autoStart: true,
-                  loop: true,
-                  delay: 150,
-                  deleteSpeed: 100,
-                }}
-              />
-            </span>
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 tracking-tight min-h-[1.2em]">
+            <Typewriter
+              onInit={(typewriter) => {
+                typewriter
+                  .typeString('Hi, I\'m <span class="text-gradient">Anas Ali</span>')
+                  .start();
+              }}
+              options={{
+                cursor: '',
+                delay: 80,
+              }}
+            />
           </h1>
           
           <div className="text-xl md:text-2xl text-slate-400 mb-8 max-w-2xl mx-auto leading-relaxed h-auto min-h-[4rem]">
@@ -92,17 +104,6 @@ const Hero = () => {
           </motion.div>
         </motion.div>
       </div>
-
-      {/* Scroll Indicator */}
-      <motion.div
-        animate={{ y: [0, 10, 0] }}
-        transition={{ duration: 2, repeat: Infinity }}
-        className="absolute bottom-10 left-1/2 -translate-x-1/2 hidden md:block"
-      >
-        <div className="w-6 h-10 border-2 border-slate-700 rounded-full flex justify-center p-1">
-          <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full" />
-        </div>
-      </motion.div>
     </section>
   );
 };

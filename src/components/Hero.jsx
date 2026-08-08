@@ -23,7 +23,8 @@ const Hero = () => {
             <div className="absolute -inset-4 bg-gradient-to-r from-cyan-500/20 to-blue-600/20 rounded-[2rem] blur-2xl group-hover:opacity-75 transition duration-1000"></div>
             
             {/* Main Image Container */}
-            <div className="relative aspect-[4/3] rounded-[2rem] overflow-hidden border-2 border-slate-800 shadow-2xl group-hover:border-cyan-500/50 transition-all duration-500">
+            <div className="relative 
+             rounded-[2rem] overflow-hidden border-2 border-slate-800 shadow-2xl group-hover:border-cyan-500/50 transition-all duration-500">
               <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent z-10" />
               <img 
                 src={heroImage} 
@@ -31,7 +32,7 @@ const Hero = () => {
                   e.target.src = "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1974&auto=format&fit=crop";
                 }}
                 alt="Anas Ali Profile" 
-                className="w-full h-full object-cover transition-all duration-700 group-hover:scale-105"
+                className="w-full h-full  transition-all duration-700 group-hover:scale-105"
               />
             </div>
 
